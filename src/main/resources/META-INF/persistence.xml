@@ -5,6 +5,11 @@
     <persistence-unit name="jpa-tutorial" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <class>no.hvl.dat250.jpa.tutorial.basicexample.Todo</class>
+        <class>no.hvl.dat250.jpa.tutorial.creditcards.Address</class>
+        <class>no.hvl.dat250.jpa.tutorial.creditcards.Bank</class>
+        <class>no.hvl.dat250.jpa.tutorial.creditcards.CreditCard</class>
+        <class>no.hvl.dat250.jpa.tutorial.creditcards.Customer</class>
+        <class>no.hvl.dat250.jpa.tutorial.creditcards.Pincode</class>
         <properties>
             <property name="hibernate.archive.autodetection" value="class"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>

@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Collection;
+import java.util.Set;
 
 @Entity
 public class Bank {
@@ -16,6 +17,6 @@ public class Bank {
     private String name;
 
     @Getter @Setter
-    @OneToMany(targetEntity = CreditCard.class)
-    private Collection<CreditCard> ownedCards;
+    @OneToMany(mappedBy = "owningBank")
+    private Set<CreditCard> ownedCards;
 }

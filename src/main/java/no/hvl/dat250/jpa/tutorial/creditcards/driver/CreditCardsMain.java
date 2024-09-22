@@ -5,10 +5,7 @@ import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 import no.hvl.dat250.jpa.tutorial.creditcards.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 
 public class CreditCardsMain {
 
@@ -53,8 +50,9 @@ public class CreditCardsMain {
 
     Customer customer = new Customer();
     customer.setName("Max Mustermann");
-    customer.setAddresses(Arrays.asList(address));
-    customer.setCreditCards(Arrays.asList(creditCard, creditCard2));
+    customer.setAddresses(Set.of(address));
+    customer.setCreditCards(Set.of(creditCard, creditCard2));
+    address.setOwners(Set.of(customer));
 
     em.persist(address);
     em.persist(pincode);

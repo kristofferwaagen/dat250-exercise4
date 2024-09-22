@@ -1,6 +1,8 @@
 package no.hvl.dat250.jpa.tutorial.creditcards;
 
 import java.util.Collection;
+import java.util.Set;
+
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -15,10 +17,10 @@ public class Customer {
 
     @Getter @Setter
     @ManyToMany(targetEntity = Address.class)
-    private Collection<Address> addresses;
+    private Set<Address> addresses;
 
     @Getter @Setter
     @ManyToMany(targetEntity = CreditCard.class)
-    private Collection<CreditCard> creditCards;
+    private Set<CreditCard> creditCards;
 
 }

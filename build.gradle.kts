@@ -13,6 +13,10 @@ dependencies {
     implementation("com.h2database:h2:2.2.220")
     testImplementation("org.junit.jupiter:junit-jupiter:5.10.3")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    annotationProcessor("org.projectlombok:lombok:1.18.34")
+    compileOnly("org.projectlombok:lombok:1.18.34")
+
 }
 
 java {
